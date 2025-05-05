@@ -7,11 +7,56 @@
   --color-seconday: #EDEDEB;
   --bg-main:#EDEDEB;
 
-  --font-h1: 132px;
-  --font-h2: 46px;
-  --font-h3: 40px;
-  --font-body: 20px;
-  --font-small:16px;
+  --font-h1: 13.2rem;
 
-  --border-radius:15px;
+  --font-h2Bigger: 4.8rem;
+  --font-h2: 4.6rem;
+  --font-h3: 3.5rem;
+  --font-body: 2.2rem;
+  --font-small:1.8rem;
+
+  --border-radius:2rem;
+
+  --grid-gutter: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+  :root {
+    --font-body: 2.4rem;
+    --font-h2Bigger: 5.2rem;
+    --font-small:2rem;
+  }
+}
+
+@media screen and (max-width: 2620px) {
+  html {
+    font-size: calc(100vw / 1024 * 7);
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  html {
+    font-size: calc(100vw / 1024 * 7);
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: calc(100vw / 1024 * 7);
+  }
+
+}
+
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: calc(100vw / 480 * 8);
+  }
+}
+
+body {
+  font-family: 'Suisse Light', Arial;
+  font-size: var(--font-body);
+  background: var(--bg-main);
 }
