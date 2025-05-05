@@ -232,7 +232,28 @@
 
 <div class="team" id="team">
     <div class="team__header">Team</div>
-
+    <div class="team__tabs" style="display: none">
+        <div class="team__tabsItem">
+            <div class="team__tabsItemHeader">
+                Paolo Colombo
+                <span>Founder & Founder & Managing Director, A++</span>
+                <img src="img/arrow2.svg" alt="">
+            </div>
+            <div class="team__tabsItemText">
+                asdadsasd
+            </div>
+        </div>
+        <div class="team__tabsItem">
+            <div class="team__tabsItemHeader">
+                Paolo Colombo
+                <span>Founder & Founder & Managing Director, A++</span>
+                <img src="img/arrow2.svg" alt="">
+            </div>
+            <div class="team__tabsItemText">
+                asdadsasd
+            </div>
+        </div>
+    </div>
     <div class="team__list">
         <div class="team__listTeam">
             <div class="team__listTeamHeader">

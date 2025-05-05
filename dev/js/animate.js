@@ -42,43 +42,46 @@ gsap.utils.toArray('.animate-box').forEach(box => {
 gsap.registerPlugin(ScrollTrigger);
 
 
-const tl = gsap.timeline({
-    onComplete: () => {
-        document.body.classList.remove('locked');
-        document.getElementById('intro').style.display = 'none';
+if (document.getElementById('intro') && document.querySelector('.logo svg')) {
+    const tl = gsap.timeline({
+        onComplete: () => {
+            document.body.classList.remove('locked');
+            document.getElementById('intro').style.display = 'none';
+        }
+    });
+
+    tl
+        .to("#intro", { duration: 1 }) // пауза
+        .to("#intro", { backgroundColor: "#888063", duration: 1 }, ">")
+        .to(".logo svg", {
+            width: "100vw",
+            height: "100vh",
+            opacity: 1,
+            duration: 0.9,
+            ease: "power1.out"
+        }, "<")
+        .to("#intro", {
+            opacity: 0,
+            duration: 1,
+            ease: "power1.out"
+        }, "-=0.6");
+
+    if (document.querySelector('.siteheader__welcome')) {
+        tl.to(".siteheader__welcome", {
+            y: "-80rem",
+            opacity: 1,
+            duration: 0.5
+        }, "-=0.5");
     }
-});
 
+    if (document.querySelector('.siteheader__heroAni')) {
+        tl.to(".siteheader__heroAni", {
+            opacity: 1,
+            duration: 0.5
+        }, "-=0.8");
+    }
+}
 
-
-tl
-    .to("#intro", { duration: 1 }) // пауза
-    .to("#intro", { backgroundColor: "#888063", duration: 1 }, ">")
-
-    .to(".logo svg", {
-        width: "100vw",
-        height: "100vh",
-        opacity: 1,
-        duration: 0.9,
-        ease: "power1.out"
-    }, "<")
-    .to("#intro", {
-        opacity: 0,
-        duration: 1,
-        ease: "power1.out"
-    }, "-=0.6")
-
-    .to(".siteheader__welcome", {
-        y: "-80rem",
-        opacity: 1,
-        duration: 0.5
-    }, "-=0.5")
-    .to(".siteheader__heroAni", {
-
-        opacity: 1,
-        duration: 0.5
-    }, "-=0.8")
-;
 
 
 
@@ -204,6 +207,19 @@ gsap.to(".section-text1", {
         trigger: ".section-text1",
         start: "-150%",
         end: "+=50%",
+        scrub: true,
+    }
+});
+
+
+
+gsap.to(".siteheader__img img", {
+    y: "-150px",
+    ease: "none",
+    scrollTrigger: {
+        trigger: ".siteheader__img",
+        start: "30%",
+        end: "+=60%",
         scrub: true,
     }
 });

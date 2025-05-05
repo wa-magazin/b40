@@ -197,10 +197,10 @@
       line-height: 9rem;
       left: calc(var(--grid-gutter) * 1);
       width: 100%;
-      background: var(--color-primary);
+      background: transparent;
       padding-top: calc(var(--grid-gutter) * 2);
       padding-bottom: calc(var(--grid-gutter) * 2);
-      bottom: calc(var(--grid-gutter) * 10);
+      bottom: calc(var(--grid-gutter) * 30 * -1);
     }
 
     span {
@@ -276,6 +276,171 @@
   }
 }
 
+.teams {
+
+  color: var(--bg-main);
+  padding: calc(var(--grid-gutter) * 1) calc(var(--grid-gutter) * 3) calc(var(--grid-gutter) * 3);
+  @media screen and (max-width: 900px) {
+
+    padding: calc(var(--grid-gutter) * 1);
+  }
+
+  &__item {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    padding-bottom: calc(var(--grid-gutter) * 2);
+    gap: calc(var(--grid-gutter) * 2);
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+      padding: calc(var(--grid-gutter) * 0);
+    }
+
+    hr {
+      margin: calc(var(--grid-gutter) * 1) 0 calc(var(--grid-gutter) * 1) 0;
+      border-bottom: 1px solid var(--color-white);
+      border-top: 0;
+    }
+
+    p {
+      margin-bottom: calc(var(--grid-gutter) * 2);
+    }
+
+    &Left {
+      flex: 0.5;
+
+      img {
+        border-radius: var(--border-radius);
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+      }
+    }
+
+    &Right {
+      flex: 0.5;
+      border-radius: var(--border-radius);
+      border: 2px solid var(--color-white);
+      padding: calc(var(--grid-gutter) * 2) calc(var(--grid-gutter) * 8) calc(var(--grid-gutter) * 2) calc(var(--grid-gutter) * 2);
+      text-align: left;
+
+      .text();
+      @media screen and (max-width: 900px) {
+        padding: calc(var(--grid-gutter) * 2);
+      }
+
+      img {
+        margin-bottom: calc(var(--grid-gutter) * 2);
+        max-width: 30rem;
+      }
+    }
+  }
+
+  &__tabs {
+    padding: calc(var(--grid-gutter) * 0) calc(var(--grid-gutter) * 3);
+    gap: calc(var(--grid-gutter) * 1);
+    display: flex;
+    flex-direction: column;
+    height: 40rem;
+    @media screen and (max-width: 900px) {
+      padding: calc(var(--grid-gutter) * 1);
+      height: 80rem;
+    }
+    &Left {
+      flex: 0.7;
+      @media screen and (max-width: 900px) {
+        flex:1;
+        width: 100%;
+      }
+    }
+
+    &Right {
+      flex: 0.3;
+      @media screen and (max-width: 900px) {
+        display: none;
+      }
+    }
+    hr {
+      margin: calc(var(--grid-gutter) * 0) 0 calc(var(--grid-gutter) * 0) 0;
+      border-bottom: 1px solid var(--color-white);
+      border-top: 0;
+      width: 60vw;
+      @media screen and (max-width: 900px) {
+        width: 100%;
+      }
+    }
+    &Item {
+
+      display: flex;
+      cursor: pointer;
+      gap: calc(var(--grid-gutter) * 2);
+      @media screen and (max-width: 900px) {
+        flex-direction: column;
+      }
+      &Header {
+        .headerBig();
+        color: var(--color-white);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: calc(var(--grid-gutter) * 1);
+        padding: calc(var(--grid-gutter) * 2);
+        width: 100%;
+        span {
+          font-size: 2.2rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: inline-flex;
+          position: relative;
+          top: -0.25rem;
+        }
+        img {
+          position: absolute;
+          right: calc(var(--grid-gutter) * 2);
+          top: 6rem;
+          width: calc(var(--grid-gutter) * 1.55);
+        }
+      }
+
+      &Text {
+        display: none;
+
+      }
+
+      &._open {
+        .teams__tabsRight {
+          border-radius: var(--border-radius);
+          background: rgba(255, 255, 255, 0.18);
+          @media screen and (max-width: 900px) {
+            display: none;
+          }
+        }
+        .teams__tabsItemHeader {
+          background: #EDEDEB;
+          padding: calc(var(--grid-gutter) * 2);
+          border-radius: var(--border-radius);
+          color:var(--color-primary);
+          img.teams__arrow {
+            display: none;
+          }
+        }
+        span {
+          color:var(--color-black);
+        }
+
+        .teams__tabsItemText {
+          color:var(--color-black);
+          .textSmall();
+          display: block !important;
+        }
+      }
+
+    }
+  }
+
+}
+
 .floors {
   background: var(--bg-main);
   color: var(--bg-main);
@@ -295,6 +460,7 @@
       border: 2px solid var(--color-primary);
       padding: calc(var(--grid-gutter) * 0.5) calc(var(--grid-gutter) * 0.5);
       border-radius: 1rem;
+
       img {
         width: 2.5rem;
       }
@@ -347,28 +513,35 @@
     border-bottom: 1px solid var(--color-primary);
     border-top: 0;
   }
+
   .table-wrapper {
     max-height: 50rem;
     overflow-y: auto;
 
   }
+
   &__totals {
     margin-bottom: var(--grid-gutter);
+
     td {
       &:first-child {
         width: 7rem;
       }
+
       &:nth-child(2) {
         width: 40rem;
       }
+
       &:nth-child(3) {
         width: 28rem !important;
       }
+
       &:last-child {
         width: 10rem;
       }
     }
   }
+
   table {
     color: var(--color-primary);
     width: 100%;
@@ -856,49 +1029,6 @@
     margin-bottom: calc(var(--grid-gutter) * 0)
   }
 
-  &__tabs {
-    padding: calc(var(--grid-gutter) * 0) calc(var(--grid-gutter) * 10);
-    gap: calc(var(--grid-gutter) * 1);
-    display: flex;
-    flex-direction: column;
-
-    &Item {
-      border: 2px solid var(--color-primary);
-      border-radius: var(--border-radius);
-      padding: calc(var(--grid-gutter) * 1.5) calc(var(--grid-gutter) * 1.5);
-      position: relative;
-      cursor: pointer;
-
-      img {
-        position: absolute;
-        right: calc(var(--grid-gutter) * 3);
-        top: calc(50% - 1rem);
-        width: calc(var(--grid-gutter) * 1.55);
-      }
-
-      &Header {
-        .headerSmall();
-        color: var(--color-primary);
-
-        span {
-          color: var(--color-black);
-          font-size: 2.2rem;
-          margin-left: calc(var(--grid-gutter) * 2);
-          width: 34rem;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          display: inline-flex;
-          position: relative;
-          top: -0.25rem;
-        }
-      }
-
-      &Text {
-        display: none;
-      }
-    }
-  }
 
   &__list {
     display: flex;

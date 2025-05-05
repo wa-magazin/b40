@@ -98,3 +98,37 @@ document.querySelector('.siteheader__burger').addEventListener('click', function
 document.querySelector('.mobilemenu__close').addEventListener('click', function () {
     document.body.classList.remove('_menu');
 });
+document.querySelectorAll('.teams__tabsItemHeader').forEach(header => {
+    header.addEventListener('click', () => {
+        const currentItem = header.closest('.teams__tabsItem');
+        const currentText = header.querySelector('.teams__tabsItemText, .teams__tabsText');
+
+        const allItems = document.querySelectorAll('.teams__tabsItem');
+
+        allItems.forEach(item => {
+            const textBlock = item.querySelector('.teams__tabsItemText, .teams__tabsText');
+            if (item !== currentItem) {
+                item.classList.remove('_open');
+                if (textBlock) {
+                    gsap.to(textBlock, {
+                        height: 0,
+                        opacity: 0,
+                        duration: 0.3,
+                        ease: "power1.inOut",
+                    });
+                }
+            }
+        });
+
+        if (!currentItem.classList.contains('_open')) {
+            currentItem.classList.add('_open');
+            if (currentText) {
+                const fullHeight = currentText.scrollHeight;
+                gsap.fromTo(currentText,
+                    { height: 0, opacity: 0, overflow: 'hidden' },
+                    { height: fullHeight, opacity: 1, duration: 0.4, ease: "power1.out" }
+                );
+            }
+        }
+    });
+});
