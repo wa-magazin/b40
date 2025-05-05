@@ -23,6 +23,24 @@
     <link rel="stylesheet" href="css/style.css?v={$smarty.now}">
 
 <body>
+
+<div class="image pin1-section">
+    <img src="img/image2.jpg" alt="" class="pin1-image">
+</div>
+
+<div class="image pin2-section">
+    <img src="img/image3.jpg" alt="" class="pin2-image hide">
+</div>
+
+
+<div class="image pin3-section">
+    <img src="img/image5.jpg" alt="" class="pin3-image hide">
+</div>
+
+
+<div class="image pin6-section">
+    <img src="img/image8.jpg" alt="" class="pin6-image hide">
+</div>
 <div id="smooth-wrapper">
     <div id="smooth-content">
         <div class="mobilemenu js-menu">
@@ -80,7 +98,7 @@
         </div>
 
 
-        <div class="start" id="about">
+        <div class="start section-text1" id="about">
             <div class="start__item">
                 <div class="start__itemHeader">
                     GRACE AND SUSTAINABILITY
@@ -91,10 +109,9 @@
                 </div>
             </div>
         </div>
-        <div class="image">
-            <img src="img/image2.jpg" alt="">
-        </div>
-        <div class="start">
+
+
+        <div class="start margin-section">
             <div class="start__item">
                 <div class="start__itemHeader">
                     PART OF THE STORY
@@ -105,7 +122,7 @@
             </div>
         </div>
 
-        <div class="numbers">
+        <div class="numbers section-text2">
             <div class="numbersHeader">
                 AT A GLANCE
             </div>
@@ -137,11 +154,8 @@
             </div>
         </div>
 
-        <div class="image">
-            <img src="img/image3.jpg" alt="">
-        </div>
 
-        <div class="start" id="location">
+        <div class="start margin-section" id="location">
             <div class="start__item">
                 <div class="start__itemHeader">
                     WHERE IT HAPPENS
@@ -194,7 +208,10 @@
         <div class="features" id="architecture">
             <div class="features__top">
                 <div class="features__topImage">
-                    <img src="img/image4.jpg" alt="" class="animate">
+                    <div class="animate-section">
+                        <div class="animate-box"></div>
+                        <img src="img/image4.jpg" alt="" class="animate">
+                    </div>
                 </div>
                 <div class="features__topText">
                     <h3>ONE OF A KIND</h3>
@@ -204,17 +221,26 @@
             </div>
             <div class="features__gallery">
                 <div class="featires__galleryItem">
-                    <img src="img/gallery1.jpg" alt="">
+                    <div class="animate-section">
+                        <div class="animate-box"></div>
+                        <img src="img/gallery1.jpg" alt="" class="animate">
+                    </div>
                 </div>
                 <div class="featires__galleryItem">
-                    <img src="img/gallery2.jpg" alt="">
+                    <div class="animate-section">
+                        <div class="animate-box"></div>
+                        <img src="img/gallery2.jpg" alt="" class="animate">
+                    </div>
                 </div>
                 <div class="featires__galleryItem">
-                    <img src="img/gallery3.jpg" alt="">
+                    <div class="animate-section">
+                        <div class="animate-box"></div>
+                        <img src="img/gallery3.jpg" alt="" class="animate">
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="working">
+        <div class="working  section-text3">
             <div class="working__top">
                 <div class="working__topText">
                     <h3>LIGHTING THE PATH</h3>
@@ -222,16 +248,16 @@
                         breath of fresh air on a dedicated terrace.</p>
                 </div>
                 <div class="working__topImage">
-                    <img src="img/image4.jpg" alt="">
+                    <div class="animate-section">
+                        <div class="animate-box"></div>
+                        <img src="img/image4.jpg" alt="" class="animate">
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="image">
-            <img src="img/image5.jpg" alt="">
-        </div>
 
-        <div class="design">
+        <div class="design margin-section section-text4">
             <div class="design__top">
                 <div class="design__topText">
                     <h3>IMAGINED IN SWITZERLAND</h3>
@@ -239,17 +265,20 @@
                         sumptuous lobby designed by A++ architecture firm.</p>
                 </div>
                 <div class="design__topImage">
-                    <img src="img/image6.jpg" alt="">
+                    <div class="animate-section">
+                        <div class="animate-box"></div>
+                        <img src="img/image6.jpg" alt="" class="animate">
+                    </div>
                 </div>
             </div>
         </div>
 
 
-        <div class="image">
+        <div class="image pin4-section">
             <img src="img/image7.jpg" alt="">
         </div>
 
-        <div class="tabs">
+        <div class="tabs pin5-section">
             <div class="tabs__item">
                 <div class="tabs__itemHeader">
                     1. Flex Spaces
@@ -283,14 +312,15 @@
             </div>
         </div>
 
-        <div class="image">
-            <img src="img/image8.jpg" alt="">
-        </div>
 
-        <div class="infrastructure" id="technology">
+        <div class="infrastructure margin-section" id="technology">
             <div class="infrastructure__top">
                 <div class="features__topImage">
-                    <img src="img/image10.jpg" alt="" class="animate">
+                    <div class="animate-section">
+                        <div class="animate-box"></div>
+                        <img src="img/image10.jpg" alt="" class="animate">
+                    </div>
+
                 </div>
                 <div class="infrastructure__topText">
                     <h3>SMART INFRASTRUCTURE</h3>
@@ -303,7 +333,7 @@
             </div>
         </div>
 
-        <div class="image">
+        <div class="image pin7-section">
             <img src="img/image11.jpg" alt="">
         </div>
 

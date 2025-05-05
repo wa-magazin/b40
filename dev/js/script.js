@@ -1,14 +1,8 @@
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
-
-/*
-ScrollSmoother.create({
-    smooth: 0.5,            // скорость сглаживания (чем выше, тем плавнее)
-   // effects: true,          // включить эффекты ScrollTrigger внутри
-    smoothTouch: 0.3        // сглаживание на touch-устройствах
-});
-*/
 document.querySelectorAll('.tabs__item').forEach(tab => {
     const content = tab.querySelector('.tabs__itemText');
+
+    // Скрыть сразу при загрузке
+    gsap.set(content, { height: 0, overflow: 'hidden' });
 
     tab.addEventListener('click', () => {
         const isOpen = tab.classList.contains('_open');
@@ -16,22 +10,38 @@ document.querySelectorAll('.tabs__item').forEach(tab => {
         // Закрыть все табы
         document.querySelectorAll('.tabs__item').forEach(t => {
             t.classList.remove('_open');
-            const text = t.querySelector('.tabs__itemText');
-
+            const c = t.querySelector('.tabs__itemText');
+            gsap.to(c, {
+                height: 0,
+                duration: 0.3,
+                ease: "power2.inOut"
+            });
         });
 
-        // Открыть текущий, если был закрыт
         if (!isOpen) {
             tab.classList.add('_open');
 
-        }
-
-        // Обновить GSAP ScrollTrigger (если используется)
-        if (typeof ScrollTrigger !== 'undefined') {
-            ScrollTrigger.refresh();
+            // Анимировать открытие
+            gsap.to(content, {
+                height: "auto",
+                duration: 0.4,
+                ease: "power2.out",
+                onComplete: () => {
+                    if (typeof ScrollTrigger !== 'undefined') {
+                        ScrollTrigger.refresh();
+                    }
+                }
+            });
+        } else {
+            // Если повторный клик — просто обновляем триггер
+            if (typeof ScrollTrigger !== 'undefined') {
+                ScrollTrigger.refresh();
+            }
         }
     });
 });
+
+
 
 
 document.querySelectorAll('.js-menu a[href^="#"]:not(.open-popup)').forEach(link => {

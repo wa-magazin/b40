@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP ScrollSmoother Fixed Slides</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+
+            font-family: sans-serif;
+            color: white;
+        }
+
+        .fixed-backgrounds {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .bg-1 { background-image: url("img/image2.jpg"); }
+        .bg-2 { background-image: url("img/image3.jpg"); }
+        .bg-3 { background-image: url("img/image4.jpg"); }
+
+        .section {
+            padding: 100px 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="fixed-backgrounds">
+    <div class="bg bg-1"></div>
+    <div class="bg bg-2"></div>
+    <div class="bg bg-3"></div>
+</div>
+
+<!-- Плавный скролл -->
+<div class="smooth-wrapper">
+    <div class="smooth-content">
+
+        <section class="section">Слайд 1 (текст)</section>
+        <section class="section trigger trigger-1">Слайд с фоном 1</section>
+
+        <section class="section">Слайд 2 (текст)</section>
+        <section class="section trigger trigger-2">Слайд с фоном 2</section>
+
+        <section class="section">Слайд 3 (текст)</section>
+        <section class="section trigger trigger-3">Слайд с фоном 3</section>
+
+    </div>
+</div>
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollSmoother.min.js"></script>
+
+<script>
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+    ScrollSmoother.create({
+        wrapper: ".smooth-wrapper",
+        content: ".smooth-content",
+        smooth: 1.2,
+        effects: true
+    });
+
+    const backgrounds = {
+        '.trigger-1': '.bg-1',
+        '.trigger-2': '.bg-2',
+        '.trigger-3': '.bg-3',
+    };
+
+    Object.entries(backgrounds).forEach(([triggerSelector, bgSelector]) => {
+        ScrollTrigger.create({
+            trigger: triggerSelector,
+            start: "top center",
+            end: "bottom center",
+            onEnter: () => showOnlyBackground(bgSelector),
+            onEnterBack: () => showOnlyBackground(bgSelector),
+            onLeave: () => hideAllBackgrounds(),
+            onLeaveBack: () => hideAllBackgrounds(),
+        });
+    });
+
+    function showOnlyBackground(activeSelector) {
+        document.querySelectorAll('.bg').forEach(bg => {
+            bg.style.opacity = bg.matches(activeSelector) ? '1' : '0';
+        });
+    }
+
+    function hideAllBackgrounds() {
+        document.querySelectorAll('.bg').forEach(bg => {
+            bg.style.opacity = '0';
+        });
+    }
+</script>
+
+</body>
+</html>

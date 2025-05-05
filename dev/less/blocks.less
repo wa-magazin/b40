@@ -245,6 +245,7 @@
 }
 
 .image {
+  overflow-x: hidden;
   @media screen and (max-width: 600px) {
     height: 70vh;
     img {
@@ -258,7 +259,7 @@
 
 .numbers {
   background: var(--color-primary);
-  padding: calc(var(--grid-gutter) * 5);
+  padding: calc(var(--grid-gutter) * 8) calc(var(--grid-gutter) * 5);
   @media screen and (max-width: 600px) {
     padding: calc(var(--grid-gutter) * 3) calc(var(--grid-gutter) * 2) calc(var(--grid-gutter) * 5);
   }
@@ -306,7 +307,7 @@
 }
 
 .location {
-
+  background: var(--bg-main);
   &__map {
     padding: 0 calc(var(--grid-gutter) * 1) calc(var(--grid-gutter) * 1) calc(var(--grid-gutter) * 1);
 
@@ -383,6 +384,7 @@
   gap: calc(var(--grid-gutter) * 2);
   flex-direction: column;
   padding: calc(var(--grid-gutter) * 2);
+  background: var(--bg-main);
   @media screen and (max-width: 600px) {
     padding: calc(var(--grid-gutter) * 1);
   }
@@ -437,6 +439,7 @@
 
 .working {
   padding: calc(var(--grid-gutter) * 1) calc(var(--grid-gutter) * 2) calc(var(--grid-gutter) * 2) calc(var(--grid-gutter) * 2);
+  background: var(--bg-main);
   @media screen and (max-width: 600px) {
     padding: calc(var(--grid-gutter) * 1);
   }
@@ -491,6 +494,7 @@
 
 .design {
   padding: calc(var(--grid-gutter) * 2);
+  background: var(--bg-main);
   @media screen and (max-width: 600px) {
     padding: calc(var(--grid-gutter) * 1);
   }
@@ -551,8 +555,9 @@
   display: flex;
   flex-direction: column;
   gap: var(--grid-gutter);
+
   @media screen and (max-width: 600px) {
-    padding: calc(var(--grid-gutter) * 2) calc(var(--grid-gutter) * 1)
+    padding: calc(var(--grid-gutter) * 2) calc(var(--grid-gutter) * 1);
   }
 
   &__item {
@@ -567,7 +572,7 @@
       right: calc(var(--grid-gutter) * 3);
       top: 4rem;
       width: calc(var(--grid-gutter) * 1.55);
-      transition: all 0.3s ease;
+      transition: transform 0.3s ease;
     }
 
     &Header {
@@ -575,38 +580,31 @@
     }
 
     &Text {
-      max-height: 0;
-      overflow: hidden;
-      transition: all 0.5s ease;
-      opacity: 0;
+
+      height: 0;
+      padding-right: calc(var(--grid-gutter) * 6);
       .text();
       color: var(--color-white);
-      padding-right: calc(var(--grid-gutter) * 6);
     }
 
     &._open {
-      transition: all 0.5s ease;
-
       .tabs__itemText {
-        margin-top: calc(var(--grid-gutter) * 2);
-        max-height: 500px;
-        opacity: 1;
+        margin-top: 2rem;
       }
-
       img {
         transform: rotate(-180deg);
-        transition: all 0.3s ease;
       }
     }
   }
-
 }
+
 
 .infrastructure {
   display: flex;
   gap: calc(var(--grid-gutter) * 2);
   flex-direction: column;
   padding: calc(var(--grid-gutter) * 2);
+  background: var(--bg-main);
   @media screen and (max-width: 600px) {
     padding: calc(var(--grid-gutter) * 1);
   }
@@ -649,7 +647,7 @@
       }
 
       p {
-        padding: calc(var(--grid-gutter) * 1) calc(var(--grid-gutter) * 7) calc(var(--grid-gutter) * 1) calc(var(--grid-gutter) * 2);
+        padding: calc(var(--grid-gutter) * 1) calc(var(--grid-gutter) * 2) calc(var(--grid-gutter) * 1) calc(var(--grid-gutter) * 2);
         .text();
         margin-bottom: 0;
         @media screen and (max-width: 600px) {
@@ -666,6 +664,7 @@
   padding: var(--grid-gutter);
   margin: calc(var(--grid-gutter) * 2) calc(var(--grid-gutter) * 4);
   border-radius: var(--border-radius);
+  background: var(--bg-main);
   @media screen and (max-width: 600px) {
     margin: calc(var(--grid-gutter) * 1) calc(var(--grid-gutter) * 1);
     border: 0;
@@ -762,7 +761,7 @@
   text-align: center;
   margin-top: calc(var(--grid-gutter) * 6);
   margin-bottom: calc(var(--grid-gutter) * 6);
-
+  background: var(--bg-main);
   &__header {
     .header();
     color: var(--color-primary);
