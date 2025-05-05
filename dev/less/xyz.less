@@ -1,29 +1,35 @@
-.pin1-section, .pin2-section, .pin3-section, .pin6-section {
-  height: 80vh;
-  width: 100%;
+.fixed-backgrounds {
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
   z-index: -1;
-  transition: all 0.3ms ease;
-  opacity: 1;
-  visibility: visible;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  min-height: 100vh;
   img {
-    z-index: 2;
-    position: fixed;
-    left:0;
-    right:0;
-    width: 100%;
-    height: 100vh;
     object-fit: cover;
-    transition: all 0.3ms ease;
-
-
+    object-position: center;
+    height: 100%;
+    width: 100%;
   }
 }
 .animate-section {
   overflow: hidden;
   width: 100%;
   height: 100%;
-
   position: relative;
 }
 .animate-box {
@@ -36,9 +42,12 @@
   z-index: 2;
 }
 
-
-.numbers {
-  z-index: 5;
+.pin4-section {
+  z-index: 10;
+  position: relative;
+}
+.pin5-section {
+  z-index: 25;
   position: relative;
 }
 .location {
@@ -46,17 +55,10 @@
   position: relative;
 }
 
-.margin-section {
-  margin-top: 100vh;
-  position: relative;
-  z-index: 1;
+.trigger-1, .trigger-2, .trigger-3, .trigger-4, .trigger-5 {
+  min-height: 100vh;
 }
 .team {
   position: relative;
   z-index: 10;
-}
-.hide {
-  opacity: 0;
-  transition: all 0.3ms ease;
-  visibility: hidden;
 }

@@ -17,5 +17,7 @@ if (empty($_SESSION['csrf_token'])) {
 }
 
 $smarty->assign('csrf_token', $_SESSION['csrf_token']);
+$smarty->assign('isHome', 1);
+
 
 $smarty->display('index.tpl');
