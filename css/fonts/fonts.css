@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Suisse Int Semi';
+    src: url('SuisseIntl-SemiBold.eot');
+    src: url('SuisseIntl-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('SuisseIntl-SemiBold.woff2') format('woff2'),
+        url('SuisseIntl-SemiBold.woff') format('woff'),
+        url('SuisseIntl-SemiBold.svg#SuisseIntl-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Suisse Int Book';
+    src: url('SuisseIntl-Book.eot');
+    src: url('SuisseIntl-Book.eot?#iefix') format('embedded-opentype'),
+        url('SuisseIntl-Book.woff2') format('woff2'),
+        url('SuisseIntl-Book.woff') format('woff'),
+        url('SuisseIntl-Book.svg#SuisseIntl-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Suisse Regular';
+    src: url('SuisseIntl-Regular.eot');
+    src: url('SuisseIntl-Regular.eot?#iefix') format('embedded-opentype'),
+        url('SuisseIntl-Regular.woff2') format('woff2'),
+        url('SuisseIntl-Regular.woff') format('woff'),
+        url('SuisseIntl-Regular.svg#SuisseIntl-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Suisse Light';
+    src: url('SuisseIntl-Light.eot');
+    src: url('SuisseIntl-Light.eot?#iefix') format('embedded-opentype'),
+    url('SuisseIntl-Light.woff2') format('woff2'),
+    url('SuisseIntl-Light.woff') format('woff'),
+    url('SuisseIntl-Light.svg#SuisseIntl-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
