@@ -194,7 +194,7 @@
         <div class="features" id="architecture">
             <div class="features__top">
                 <div class="features__topImage">
-                    <img src="img/image4.jpg" alt="">
+                    <img src="img/image4.jpg" alt="" class="animate">
                 </div>
                 <div class="features__topText">
                     <h3>ONE OF A KIND</h3>
@@ -290,7 +290,7 @@
         <div class="infrastructure" id="technology">
             <div class="infrastructure__top">
                 <div class="features__topImage">
-                    <img src="img/image10.jpg" alt="">
+                    <img src="img/image10.jpg" alt="" class="animate">
                 </div>
                 <div class="infrastructure__topText">
                     <h3>SMART INFRASTRUCTURE</h3>
