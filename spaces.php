@@ -1,5 +1,5 @@
 <?php
-
+require 'config.php';
 require 'vendor/autoload.php';
 
 use Smarty\Smarty;
@@ -17,7 +17,8 @@ if (empty($_SESSION['csrf_token'])) {
 }
 
 $smarty->assign('csrf_token', $_SESSION['csrf_token']);
+
 $smarty->assign('isArchitecture', 1);
 $smarty->assign('title', "Architecture and design");
-
-$smarty->display('architecture.tpl');
+$smarty->assign('url', $url);
+$smarty->display('spaces.tpl');

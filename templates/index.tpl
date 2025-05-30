@@ -5,8 +5,6 @@
     {include file="head.tpl"}
 <body class="locked">
 
-
-
 <div id="intro">
     <div class="logo">
         <svg width="136" height="82" viewBox="0 0 136 82" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -16,21 +14,19 @@
         </svg>
     </div>
 </div>
-<main>Контент страницы</main>
-
 
 <div class="fixed-backgrounds">
     <div class="bg bg-1">
-        <img src="img/fixed-1.jpg" alt="">
+        <img src="{$url}img/fixed-1.jpg" alt="">
     </div>
     <div class="bg bg-2">
-        <img src="img/fixed-2.jpg" alt="">
+        <img src="{$url}img/fixed-2.jpg" alt="">
     </div>
     <div class="bg bg-3">
-        <img src="img/fixed-3.jpg" alt="">
+        <img src="{$url}img/fixed-3.jpg" alt="">
     </div>
     <div class="bg bg-4">
-        <img src="img/fixed-4.jpg" alt="">
+        <img src="{$url}img/fixed-4.jpg" alt="">
     </div>
 </div>
 {include file="popup.tpl"}
@@ -38,14 +34,14 @@
     <div id="smooth-content">
         <div class="mobilemenu js-menu">
             <ul>
-                {include file="menu.tpl"}
+                {include file="menu.tpl" dropdown=1}
             </ul>
             <div class="mobilemenu__close">
                 <span></span>
                 <span></span>
             </div>
             <div class="mobilemenu__button">
-                <a href="#" class="button open-popup">Contact</a>
+                <a href="#contact" class="button {* open-popup *}">Contact</a>
             </div>
         </div>
 

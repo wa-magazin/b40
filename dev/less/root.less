@@ -9,15 +9,16 @@
 
   --font-h1: 13.2rem;
 
-  --font-h2Bigger: 4.8rem;
-  --font-h2: 4.6rem;
+  --font-h2Bigger: 4rem;
+  --font-h2: 3.5rem;
   --font-h3: 3.5rem;
-  --font-body: 2.2rem;
+  --font-body: 2rem;
   --font-small:1.8rem;
 
   --border-radius:2rem;
 
-  --grid-gutter: 2rem;
+  --grid-gutter: 1.5rem;
+
 }
 
 @media screen and (max-width: 900px) {
@@ -59,4 +60,10 @@ body {
   font-family: 'Suisse Light', Arial;
   font-size: var(--font-body);
   background: var(--bg-main);
+}
+
+@media (min-width: 1800px) {
+  html {
+    font-size: 12px; /* фиксируем нужный размер */
+  }
 }

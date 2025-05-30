@@ -3,5 +3,5 @@ RewriteEngine On
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^architecture/?$ architecture.php [L]
+RewriteRule ^spaces/?$ spaces.php [L]
 RewriteRule ^team/?$ team.php [L]

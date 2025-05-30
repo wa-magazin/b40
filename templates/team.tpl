@@ -8,7 +8,7 @@
 
 <div id="smooth-wrapper">
     <div id="smooth-content">
-        <div class="mobilemenu js-menu">
+        <div class="mobilemenu js-mobilemenu">
             <ul>
                 {include file="menu.tpl"}
             </ul>
@@ -17,7 +17,7 @@
                 <span></span>
             </div>
             <div class="mobilemenu__button">
-                <a href="#" class="button open-popup">Contact</a>
+                <a href="#contact" class="button  {* open-popup *}">Contact</a>
             </div>
         </div>
         {include file="header.tpl"}
@@ -25,10 +25,10 @@
         <div class="teams">
             <div class="teams__item">
                 <div class="teams__itemLeft">
-                    <img src="/img/teams.jpg" alt="">
+                    <img src="{$url}img/teams.jpg" alt="">
                 </div>
                 <div class="teams__itemRight">
-                    <img src="/img/a-logo-white.svg" alt="">
+                    <img src="{$url}img/a-logo-white.svg" alt="">
                     <p>Pro Squad</p>
                     <hr>
                     <p>A++ is an international architectural firm specializing in architecture and interior design. Headquartered in Lugano, Switzerland, with offices in 20 countries, the firm has developed comprehensive architectural and interior design concepts for luxury brands such as Lamborghini, Elie Saab, Versace, and Bentley.</p>
@@ -41,36 +41,40 @@
             <div class="teams__tabsItem">
                 <div class="teams__tabsLeft">
                     <div class="teams__tabsItemHeader">
-                        Paolo Colombo
-                        <span>Founder & Founder & Managing Director, A++</span>
-
-                        <img src="/img/arrow2-white.svg" class="teams__arrow"  alt="">
-                        <div class="teams__tabsItemText">
-                            <p>Carlo Colombo, an award-winning architect, co-founded A++ in 2013, expanding it globally with offices in Lugano, Zurich, New York, Miami, and Dubai. He has collaborated with top Italian brands and exhibited in major international museums.</p>
-                            <p>A mentor and educator, he has shaped the future of design through prestigious mentorship programs and academic contributions. His work has earned Red Dot, Elle Decor, and Wallpaper Design Awards.</p>
+                        <div class="teams__tabsItemL">
+                            Paolo Colombo
+                            <span>Founder & Founder & Managing Director, A++</span>
+                            <img src="{$url}img/arrow2-white.svg" class="teams__arrow"  alt="">
+                        </div>
+                        <div class="teams__tabsItemR">
+                            <div class="teams__tabsItemText">
+                                <p>Born in 1970, architect Paolo Colombo graduated from the Politecnico di Milano in 1998 and founded the international studio A++, specializing in sustainable and functional design of hotels, restaurants, residences, and commercial spaces. His innovative approach blends art, practicality, and environmental harmony to enhance well-being. </p>
+                                <img src="{$url}img/close.svg" class="teams__close"  alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="teams__tabsRight">
 
-                </div>
             </div>
             <hr>
             <div class="teams__tabsItem">
                 <div class="teams__tabsLeft">
                     <div class="teams__tabsItemHeader">
+                        <div class="teams__tabsItemL">
                         Carlo Colombo
                         <span>Partner & Creative Director, A++</span>
-                        <img src="/img/arrow2-white.svg" class="teams__arrow" alt="">
-                        <div class="teams__tabsItemText">
-                            <p>Carlo Colombo, an award-winning architect, co-founded A++ in 2013, expanding it globally with offices in Lugano, Zurich, New York, Miami, and Dubai. He has collaborated with top Italian brands and exhibited in major international museums.</p>
-                            <p>A mentor and educator, he has shaped the future of design through prestigious mentorship programs and academic contributions. His work has earned Red Dot, Elle Decor, and Wallpaper Design Awards.</p>
+                        <img src="{$url}img/arrow2-white.svg" class="teams__arrow" alt="">
+                        </div>
+                        <div class="teams__tabsItemR">
+                            <div class="teams__tabsItemText">
+                                <p>Carlo Colombo, an award-winning architect, co-founded A++ in 2013, expanding it globally with offices in Lugano, Zurich, New York, Miami, and Dubai. He has collaborated with top Italian brands and exhibited in major international museums.</p>
+                                <p>A mentor and educator, he has shaped the future of design through prestigious mentorship programs and academic contributions. His work has earned Red Dot, Elle Decor, and Wallpaper Design Awards.</p>
+                                <img src="{$url}img/close.svg" class="teams__close"  alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="teams__tabsRight">
 
-                </div>
             </div>
 
         </div>
