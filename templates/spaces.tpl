@@ -30,7 +30,8 @@
                     <div class="swiper-slide">
                         <div class="floors__item">
                             <div class="floors__itemLeft">
-                                <img src="{$url}img/floors/1-floor.png" data-fancybox="floors" alt="Floor 1">
+                                <img src="{$url}img/floors/1-floor.png" data-fancybox="floors" data-caption="Floor 1" alt="Floor 1">
+                                <small>{$t.floors.hint}</small>
                             </div>
                             <div class="floors__itemRight">
                                 <div class="floors__itemHeader">1st floor</div>
@@ -43,7 +44,7 @@
                                             <th>№</th>
                                             <th>Name of premises</th>
                                             <th>Workplace</th>
-                                            <th>M2</th>
+                                            <th>m<sup>2</sup></th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -88,7 +89,8 @@
                     <div class="swiper-slide">
                         <div class="floors__item">
                             <div class="floors__itemLeft">
-                                <img src="{$url}img/floors/2-floor.png" data-fancybox="floors" alt="Floor 2">
+                                <img src="{$url}img/floors/2-floor.png" data-fancybox="floors"  data-caption="Floor 2"  alt="Floor 2">
+                                <small>{$t.floors.hint}</small>
                             </div>
                             <div class="floors__itemRight">
                                 <div class="floors__itemHeader">2nd floor</div>
@@ -101,7 +103,7 @@
                                             <th>№</th>
                                             <th>Name of premises</th>
                                             <th>Workplace</th>
-                                            <th>M2</th>
+                                            <th>m<sup>2</sup></th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -147,7 +149,8 @@
                     <div class="swiper-slide">
                         <div class="floors__item">
                             <div class="floors__itemLeft">
-                                <img src="{$url}img/floors/3-floor.png" data-fancybox="floors" alt="Floor 3">
+                                <img src="{$url}img/floors/3-floor.png" data-fancybox="floors"  data-caption="Floor 3" alt="Floor 3">
+                                <small>{$t.floors.hint}</small>
                             </div>
                             <div class="floors__itemRight">
                                 <div class="floors__itemHeader">3rd floor</div>
@@ -160,7 +163,7 @@
                                             <th>№</th>
                                             <th>Name of premises</th>
                                             <th>Workplace</th>
-                                            <th>M2</th>
+                                            <th>m<sup>2</sup></th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -205,7 +208,8 @@
                     <div class="swiper-slide">
                         <div class="floors__item">
                             <div class="floors__itemLeft">
-                                <img src="{$url}img/floors/4-floor.png" data-fancybox="floors" alt="Floor 4">
+                                <img src="{$url}img/floors/4-floor.png" data-fancybox="floors"  data-caption="Floor 4" alt="Floor 4">
+                                <small>{$t.floors.hint}</small>
                             </div>
                             <div class="floors__itemRight">
                                 <div class="floors__itemHeader">4th floor</div>
@@ -218,7 +222,7 @@
                                             <th>№</th>
                                             <th>Name of premises</th>
                                             <th>Workplace</th>
-                                            <th>M2</th>
+                                            <th>m<sup>2</sup></th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -262,7 +266,8 @@
                     <div class="swiper-slide">
                         <div class="floors__item">
                             <div class="floors__itemLeft">
-                                <img src="{$url}img/floors/5-floor.png" data-fancybox="floors" alt="Floor 5">
+                                <img src="{$url}img/floors/5-floor.png" data-fancybox="floors"  data-caption="Floor 5" alt="Floor 5">
+                                <small>{$t.floors.hint}</small>
                             </div>
                             <div class="floors__itemRight">
                                 <div class="floors__itemHeader">5th floor</div>
@@ -275,7 +280,7 @@
                                             <th>№</th>
                                             <th>Name of premises</th>
                                             <th>Workplace</th>
-                                            <th>M2</th>
+                                            <th>m<sup>2</sup></th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -319,7 +324,8 @@
                     <div class="swiper-slide">
                         <div class="floors__item">
                             <div class="floors__itemLeft">
-                                <img src="{$url}img/floors/6-floor.png" data-fancybox="floors" alt="Floor 6">
+                                <img src="{$url}img/floors/6-floor.png" data-fancybox="floors"  data-caption="Floor 6" alt="Floor 6">
+                                <small>{$t.floors.hint}</small>
                             </div>
                             <div class="floors__itemRight">
                                 <div class="floors__itemHeader">6th floor</div>
@@ -332,7 +338,7 @@
                                             <th>№</th>
                                             <th>Name of premises</th>
                                             <th>Workplace</th>
-                                            <th>M2</th>
+                                            <th>m<sup>2</sup></th>
                                         </tr>
                                         </thead>
                                         <tbody>

@@ -227,7 +227,7 @@ if(!isMobile) {
     });
 
     gsap.to(".pin4-section", {
-        scale: 1.4,
+        scale: 1.05,
         ease: "none",
         scrollTrigger: {
             trigger: ".pin4-section",

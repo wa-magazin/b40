@@ -1,6 +1,6 @@
 {strip}
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     {include file="head.tpl"}
 <body class="locked">
@@ -48,8 +48,12 @@
         {include file="header.tpl"}
         {include file="home.tpl"}
         {include file="footer.tpl"}
+
+        <a class="scroll-to-top" href="#" id="scrollToTop"><svg width="50" height="50" viewBox="0 0 50 50"><path  d="m 31.370879,23.84883 a 1.008,1.008 0 0 1 -1.425,0 l -3.292,-3.292 v 11.606 a 1,1 0 0 1 -2,0 v -11.606 l -3.292,3.292 a 1.008,1.008 0 0 1 -1.425,-1.426 l 4.977,-4.977 a 0.92,0.92 0 0 1 0.251,-0.131 0.987,0.987 0 0 1 0.2,-0.1 0.919,0.919 0 0 1 0.172,-0.033 0.989,0.989 0 0 1 0.861,0.266 l 4.977,4.977 a 1.008,1.008 0 0 1 -0.004,1.424 z"/></svg></a>
+
     </div>
 </div>
+
 {include file="scripts.tpl"}
 </body>
 </html>

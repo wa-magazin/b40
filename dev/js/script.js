@@ -1,3 +1,20 @@
+document.addEventListener('scroll', function () {
+    if (window.scrollY > 100) {
+        document.querySelectorAll('.scroll-to-top').forEach(el => el.classList.add('_show'));
+    } else {
+        document.querySelectorAll('.scroll-to-top').forEach(el => el.classList.remove('_show'));
+    }
+});
+
+document.querySelectorAll('.scroll-to-top').forEach(el => {
+    el.addEventListener('click', scrollToTop);
+});
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+
 document.querySelectorAll('.tabs__item').forEach(tab => {
     const content = tab.querySelector('.tabs__itemText');
 
@@ -51,15 +68,20 @@ document.querySelectorAll('.js-menu a[href^="#"]:not(.open-popup)').forEach(link
         if (target) {
             document.body.classList.remove('_menu');
 
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+            const offset = (targetId === '#about') ? 300 : 0;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
             });
         } else {
             console.warn('Target not found for selector:', targetId);
         }
     });
 });
+
 
 document.querySelectorAll('.mobilemenu a').forEach(link => {
     link.addEventListener('click', function (e) {
